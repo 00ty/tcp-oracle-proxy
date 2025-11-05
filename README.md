@@ -30,3 +30,22 @@ go run tcp_oracle_proxy.go
 
 # 3. Connect your Oracle client to
 localhost:9001
+
+```
+Traffic is forwarded to the default upstream 192.168.8.11:1521.
+Edit the constants at the top of the file to change listen or target addresses.
+
+## Build & Install
+```bash
+go build -ldflags="-s -w" -o tcp-oracle-proxy tcp_oracle_proxy.go
+sudo cp tcp-oracle-proxy /usr/local/bin/
+```
+
+## Flags / Environment (planned)
+Next releases will support:
+
+- -l listen address
+- -t target address
+- -metrics Prometheus endpoint
+- -retry-max max back-off duration
+Until then, simply edit the const block and re-compile.
