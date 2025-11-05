@@ -22,7 +22,7 @@ Keeps client sessions **alive across server restarts, network hiccups or fail-ov
 
 ```bash
 # 1. Clone
-git clone https://github.com/YOUR_GITHUB/tcp-oracle-proxy.git
+git clone https://github.com/00ty/tcp-oracle-proxy.git
 cd tcp-oracle-proxy
 
 # 2. Run
